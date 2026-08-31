@@ -1,106 +1,106 @@
 import AnimatedSection from "@/components/AnimatedSection";
-import { Users, Sprout, Building2, Sun } from "lucide-react";
+import ParallaxSection from "@/components/ParallaxSection";
+import { CheckCircle2 } from "lucide-react";
 
 export const metadata = {
   title: "About Us | AZTEK",
-  description: "Learn about the history, rebranding, and mission of AZTEK - formerly Chamathkara Alu Creations.",
+  description: "Learn about AZTEK's vision, mission, and the Aztec legacy that inspires our engineering, agriculture, and manufacturing.",
 };
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <div className="flex flex-col min-h-screen pt-10">
-      
-      {/* Page Header */}
-      <section className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-        <div className="container mx-auto px-4 md:px-6">
+    <div className="flex flex-col min-h-screen pt-24 bg-[var(--color-onyx-black)]">
+      {/* Header */}
+      <ParallaxSection className="py-20 md:py-32 border-b border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-[var(--color-charcoal)] to-[var(--color-onyx-black)]">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Our Story</h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-              From a trusted family business to a forward-thinking corporate enterprise spanning fabrication, agriculture, and manufacturing.
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-gold">About AZTEK</h1>
+            <p className="text-xl text-[var(--color-silver-metal)] max-w-3xl mx-auto">
+              To lead the industry in engineered aluminum and architectural fabrication by delivering end-to-end solutions combining precision engineering, master craftsmanship, and flawless installation.
             </p>
           </AnimatedSection>
         </div>
+      </ParallaxSection>
+
+      {/* The Aztec Connection */}
+      <section className="py-24 bg-[var(--color-onyx-black)]">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection>
+            <div className="mb-16 text-center md:text-left">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">The Aztec Connection</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-copper)] mb-8 mx-auto md:mx-0"></div>
+              <p className="text-[var(--color-silver-metal)] text-xl mb-8 max-w-4xl leading-relaxed">
+                The name AZTEK binds our diverse sectors together under a single narrative of pioneer-level engineering, resourcefulness, and master craftsmanship. The Aztec civilization is renowned for three distinct pillars that map directly onto our business verticals:
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedSection delay={0.1}>
+              <div className="glass-card p-8 rounded-2xl h-full border-t-4 border-t-[var(--color-silver-metal)] hover:-translate-y-2 transition-transform duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-gradient-silver">Engineering & Fabrication</h3>
+                <p className="text-[var(--color-silver-metal)] leading-relaxed">
+                  The Aztecs were legendary master builders and stonemasons, famous for constructing complex architectural marvels, grand temples, and intricate decorative stonework without modern machinery. Our aluminium fabrication and decor mirror that same spirit of structural precision, durability, and functional aesthetics.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="glass-card p-8 rounded-2xl h-full border-t-4 border-t-[var(--color-royal-gold)] hover:-translate-y-2 transition-transform duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-gradient-gold">Agricultural Innovation</h3>
+                <p className="text-[var(--color-silver-metal)] leading-relaxed">
+                  Aztecs invented chinampas (floating gardens)—an advanced, highly efficient hydro-agricultural system that maximized crop yields in limited spaces. Using smart tech in agriculture aligns perfectly with their legacy of innovative, high-efficiency farming techniques.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="glass-card p-8 rounded-2xl h-full border-t-4 border-t-[var(--color-copper)] hover:-translate-y-2 transition-transform duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-gradient-bronze">Toolmaking & Manufacturing</h3>
+                <p className="text-[var(--color-silver-metal)] leading-relaxed">
+                  Aztec craftsmen engineered sharp, highly durable obsidian tools, weapons, and specialized hardware essential for daily survival and mass construction. Manufacturing new tools pays homage to their inventive toolmaking tradition.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
       </section>
 
-      {/* History & Rebranding */}
-      <section className="py-20">
+      {/* Vision & Mission */}
+      <section className="py-24 bg-[var(--color-charcoal)] border-t border-[var(--color-steel-grey)]/30">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <AnimatedSection>
-              <h2 className="text-3xl font-bold mb-6">The Evolution to AZTEK</h2>
-              <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
-                <p>
-                  Established over two decades ago, <strong>Chamathkara Alu Creations</strong> built a strong foundation as a renowned family business, providing countless services to society and clients across multiple districts in Sri Lanka.
+              <div className="bg-[var(--color-onyx-black)] p-10 rounded-2xl h-full border border-[var(--color-royal-gold)]/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Our Vision</h2>
+                <p className="text-[var(--color-silver-metal)] leading-relaxed text-lg mb-6">
+                  To redefine modern architecture through precision-engineered aluminum solutions, transforming complex blueprints into durable, high-end interior and exterior spaces.
                 </p>
-                <p>
-                  To scale our operations and emerge into new sub-fields, we are transitioning our partnership into a registered Private Limited Company: <strong>AZTEK (PVT) LTD</strong>.
-                </p>
-                <p>
-                  This corporate umbrella drives our growth across three distinct branches, allowing us to leverage our knowledge into smart agriculture, business process outsourcing, and high-nutrient algae production, while continuing to dominate the architectural aluminum sector.
-                </p>
+                <div className="w-16 h-1 bg-gradient-to-r from-[var(--color-silver-metal)] to-[var(--color-aluminium)]"></div>
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={0.2} className="relative h-[400px] rounded-2xl overflow-hidden glass border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-8">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent opacity-50"></div>
-              <div className="relative z-10 text-center">
-                <p className="text-sm uppercase tracking-widest text-slate-500 mb-2">Formerly</p>
-                <h3 className="text-2xl font-semibold text-slate-400 mb-8">Chamathkara Alu Creations</h3>
-                <div className="w-px h-12 bg-slate-300 dark:bg-slate-700 mx-auto my-4"></div>
-                <p className="text-sm uppercase tracking-widest text-primary mb-2 mt-8">Now</p>
-                <h3 className="text-4xl font-bold text-foreground">AZTEK</h3>
+            <AnimatedSection delay={0.2}>
+              <div className="bg-[var(--color-onyx-black)] p-10 rounded-2xl h-full border border-[var(--color-royal-gold)]/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why Choose Us</h2>
+                <ul className="space-y-6">
+                  {[
+                    "Uncompromising Quality: Zero-defect checks.",
+                    "End-to-End Execution: From site visit to handover.",
+                    "Advanced Technology: Integrating smart tech in all divisions.",
+                    "Master Craftsmanship: Legacy of the Aztecs."
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-[var(--color-royal-gold)] mr-4 shrink-0 mt-0.5" />
+                      <span className="text-[var(--color-silver-metal)] text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
-
-      {/* Mission & Values */}
-      <section className="py-20 bg-primary/5 dark:bg-primary/10">
-        <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Mission & Values</h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Our business is built on strong social values, environmental sustainability, and technological advancement.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <AnimatedSection delay={0.1} className="bg-white dark:bg-slate-950 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-              <Sun className="w-10 h-10 text-amber-500 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Green Sustainability</h3>
-              <p className="text-slate-500 leading-relaxed">
-                We recycle 100% of our aluminum scrap and metal off-cuts. We utilize solar panels to operate machinery and minimize material waste with smart layouts, attracting eco-conscious clients.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2} className="bg-white dark:bg-slate-950 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-              <Users className="w-10 h-10 text-blue-500 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Job Creation & Training</h3>
-              <p className="text-slate-500 leading-relaxed">
-                We employ direct workshop workers and create numerous indirect jobs. We host free fabrication and decor workshops led by industry experts to teach local youth practical technical skills.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3} className="bg-white dark:bg-slate-950 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-              <Building2 className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Quality Optimization</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Maintaining strict ISO-grade inspection standards and zero-defect checks to ensure standard, export-ready aluminum and structural products.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.4} className="bg-white dark:bg-slate-950 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-              <Sprout className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Tech-Driven Future</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Adopting 3D CAD modeling and CNC automation to speed up production, eliminate manual errors, and lay the digital foundation for future expansion.
-              </p>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-      
     </div>
   );
 }

@@ -4,51 +4,54 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Divisions", path: "/divisions" },
-  { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" },
-];
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Divisions", href: "/divisions" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "glass py-3" : "bg-transparent py-5"
+    <header 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-[var(--color-onyx-black)]/90 backdrop-blur-md border-b border-[var(--color-royal-gold)]/20 shadow-[0_4px_30px_rgba(0,0,0,0.5)] py-3" 
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+          <Link href="/" className="flex items-center gap-2 group">
+            <span className="text-3xl font-extrabold tracking-widest text-gradient-gold">
               AZTEK
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                href={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === link.path ? "text-primary" : "text-foreground/80"
+                href={link.href}
+                className={`text-sm font-medium uppercase tracking-wider transition-colors hover:text-[var(--color-royal-gold)] relative ${
+                  pathname === link.href 
+                    ? "text-[var(--color-champagne)] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[var(--color-royal-gold)]" 
+                    : "text-[var(--color-silver-metal)]"
                 }`}
               >
                 {link.name}
@@ -56,44 +59,36 @@ export default function Navigation() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 w-full glass border-t border-white/10"
-          >
-            <nav className="flex flex-col py-4 px-4 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium px-4 py-2 rounded-md ${
-                    pathname === link.path
-                      ? "bg-primary/10 text-primary"
-                      : "text-foreground/80 hover:bg-foreground/5 hover:text-foreground"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Mobile Nav */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-[var(--color-onyx-black)] border-b border-[var(--color-royal-gold)]/20 shadow-xl py-4 flex flex-col px-4 gap-4 backdrop-blur-md">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`p-3 rounded-md text-sm font-medium uppercase tracking-wider ${
+                pathname === link.href 
+                  ? "bg-[var(--color-royal-gold)]/10 text-[var(--color-champagne)] border-l-4 border-[var(--color-royal-gold)]" 
+                  : "text-[var(--color-silver-metal)] hover:bg-[var(--color-charcoal)] hover:text-[var(--color-aluminium)]"
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

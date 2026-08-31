@@ -3,10 +3,28 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #10b981; /* Emerald 500 for Agrotec & accents */
-  --color-primary-dark: #059669;
-  --color-secondary: #94a3b8; /* Slate 400 for metallic/Alucore feel */
-  --color-secondary-dark: #64748b;
+  
+  /* Primary Palette */
+  --color-onyx-black: #0D0D0F;
+  --color-charcoal: #1F2328;
+  --color-steel-grey: #4A4F55;
+  --color-silver-metal: #C5C8CC;
+  --color-aluminium: #E9ECEF;
+  
+  /* Secondary Palette */
+  --color-deep-bronze: #3B2A1A;
+  --color-antique-bronze: #7A5A2E;
+  --color-royal-gold: #B8862B;
+  --color-sand-beige: #D6C7A6;
+  --color-ivory-cream: #F3EFE6;
+  
+  /* Accent Palette */
+  --color-copper: #C26A2E;
+  --color-champagne: #D4AF37;
+  --color-brushed-silver: #A6A8AD;
+  --color-slate-blue: #2A3139;
+  --color-midnight-teal: #0F1D20;
+  
   --font-sans: var(--font-inter);
   
   --animate-fade-in: fade-in 0.5s ease-out forwards;
@@ -14,14 +32,16 @@
 }
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  /* Defaulting to Dark Theme First */
+  --background: #0D0D0F; /* Onyx Black */
+  --foreground: #E9ECEF; /* Aluminium */
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #020617; /* Slate 950 */
-    --foreground: #f8fafc; /* Slate 50 */
+    /* We can still support a light theme if needed, but the primary vibe is dark */
+    --background: #F3EFE6; /* Ivory Cream */
+    --foreground: #0D0D0F; /* Onyx Black */
   }
 }
 
@@ -32,19 +52,44 @@ body {
   overflow-x: hidden;
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Metallic Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(to right, #B8862B, #D4AF37, #B8862B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-@media (prefers-color-scheme: light) {
-  .glass {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
+.text-gradient-silver {
+  background: linear-gradient(to right, #A6A8AD, #E9ECEF, #C5C8CC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-bronze {
+  background: linear-gradient(to right, #7A5A2E, #C26A2E, #7A5A2E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glassmorphism & Reflection */
+.glass {
+  background: rgba(31, 35, 40, 0.4); /* Charcoal with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 200, 204, 0.1); /* Silver Metal border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(31,35,40,0.6) 0%, rgba(13,13,15,0.8) 100%);
+  border: 1px solid rgba(184, 134, 43, 0.15); /* Royal Gold subtle border */
+  backdrop-filter: blur(10px);
 }
 
 @keyframes fade-in {
@@ -53,6 +98,6 @@ body {
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
