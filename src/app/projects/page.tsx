@@ -107,13 +107,13 @@ export default function ProjectsPage() {
       <ParallaxSection className="py-32 border-t border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-[var(--color-charcoal)] to-[var(--color-onyx-black)]">
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Have a project in mind?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Have a project in mind?</h2>
             <p className="text-[var(--color-silver-metal)] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               Let's discuss how we can bring precision engineering and master craftsmanship to your next endeavor.
             </p>
             <Link 
               href="/contact" 
-              className="inline-flex px-10 py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-[var(--color-onyx-black)] rounded-md font-bold text-lg transition-colors shadow-[0_0_20px_rgba(184,134,43,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
+              className="inline-flex px-10 py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-md font-bold text-lg transition-colors shadow-[0_0_20px_rgba(184,134,43,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
             >
               Start a Conversation
             </Link>

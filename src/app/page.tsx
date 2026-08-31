@@ -37,7 +37,7 @@ export default function Home() {
             <AnimatedSection delay={0.1} className="glass-card p-8 rounded-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-royal-gold)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150"></div>
               <ShieldCheck className="w-12 h-12 text-[var(--color-royal-gold)] mb-6" />
-              <h3 className="text-xl font-bold mb-3 text-white">Precision & Durability</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Precision & Durability</h3>
               <p className="text-[var(--color-silver-metal)] leading-relaxed">
                 Engineered to exact tolerances for long-term structural performance. We guarantee zero-defect checks for standard, export-ready products.
               </p>
@@ -46,7 +46,7 @@ export default function Home() {
             <AnimatedSection delay={0.2} className="glass-card p-8 rounded-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brushed-silver)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150"></div>
               <Layers className="w-12 h-12 text-[var(--color-silver-metal)] mb-6" />
-              <h3 className="text-xl font-bold mb-3 text-white">End-to-End Scope</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">End-to-End Scope</h3>
               <p className="text-[var(--color-silver-metal)] leading-relaxed">
                 Single-source delivery covering ceilings, i-panels, shopfronts, glass railings, and custom fixtures from site visit to final handover.
               </p>
@@ -55,7 +55,7 @@ export default function Home() {
             <AnimatedSection delay={0.3} className="glass-card p-8 rounded-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-copper)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150"></div>
               <Award className="w-12 h-12 text-[var(--color-copper)] mb-6" />
-              <h3 className="text-xl font-bold mb-3 text-white">Architectural Standard</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Architectural Standard</h3>
               <p className="text-[var(--color-silver-metal)] leading-relaxed">
                 Setting the industry benchmark for quality across commercial and residential projects, trusted by corporate leaders like Pyramid Lanka.
               </p>
@@ -137,13 +137,13 @@ export default function Home() {
       <ParallaxSection className="py-32 border-t border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-[var(--color-charcoal)] to-[var(--color-onyx-black)]">
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">Ready to Build the <span className="text-gradient-gold">Future?</span></h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Ready to Build the <span className="text-gradient-gold">Future?</span></h2>
             <p className="text-[var(--color-silver-metal)] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               Partner with AZTEK for your next architectural, fabrication, or smart agriculture project. Let's create something extraordinary together.
             </p>
             <Link 
               href="/contact" 
-              className="inline-flex px-10 py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-[var(--color-onyx-black)] rounded-md font-bold text-lg transition-colors shadow-[0_0_20px_rgba(184,134,43,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
+              className="inline-flex px-10 py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-md font-bold text-lg transition-colors shadow-[0_0_20px_rgba(184,134,43,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
             >
               Get in Touch Today
             </Link>

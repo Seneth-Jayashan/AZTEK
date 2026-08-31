@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +39,22 @@ export default function Navigation() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-3xl font-extrabold tracking-widest text-gradient-gold">
-              AZTEK
-            </span>
+            <Image 
+              src="/Logo_light.png" 
+              alt="AZTEK Logo" 
+              width={120} 
+              height={40} 
+              className="hidden dark:block object-contain"
+              priority
+            />
+            <Image 
+              src="/Logo_dark.png" 
+              alt="AZTEK Logo" 
+              width={120} 
+              height={40} 
+              className="block dark:hidden object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -57,16 +72,20 @@ export default function Navigation() {
                 {link.name}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden text-white p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
+            <button 
+              className="text-foreground p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 

@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Primary Palette */
-  --color-onyx-black: #0D0D0F;
-  --color-charcoal: #1F2328;
-  --color-steel-grey: #4A4F55;
-  --color-silver-metal: #C5C8CC;
-  --color-aluminium: #E9ECEF;
+  /* Primary Palette is handled via :root and .dark for theme switching */
   
   /* Secondary Palette */
   --color-deep-bronze: #3B2A1A;
@@ -32,17 +29,27 @@
 }
 
 :root {
-  /* Defaulting to Dark Theme First */
-  --background: #0D0D0F; /* Onyx Black */
-  --foreground: #E9ECEF; /* Aluminium */
+  /* Defaulting to Light Theme */
+  --background: #F3EFE6; /* Ivory Cream */
+  --foreground: #0D0D0F; /* Onyx Black */
+  
+  --color-onyx-black: #FFFFFF;
+  --color-charcoal: #E9ECEF;
+  --color-steel-grey: #A6A8AD;
+  --color-silver-metal: #4A4F55;
+  --color-aluminium: #1F2328;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    /* We can still support a light theme if needed, but the primary vibe is dark */
-    --background: #F3EFE6; /* Ivory Cream */
-    --foreground: #0D0D0F; /* Onyx Black */
-  }
+.dark {
+  /* Dark Theme */
+  --background: #0D0D0F; /* Onyx Black */
+  --foreground: #E9ECEF; /* Aluminium */
+  
+  --color-onyx-black: #0D0D0F;
+  --color-charcoal: #1F2328;
+  --color-steel-grey: #4A4F55;
+  --color-silver-metal: #C5C8CC;
+  --color-aluminium: #E9ECEF;
 }
 
 body {
@@ -79,16 +86,16 @@ body {
 
 /* Glassmorphism & Reflection */
 .glass {
-  background: rgba(31, 35, 40, 0.4); /* Charcoal with opacity */
+  background: color-mix(in srgb, var(--color-charcoal) 40%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 200, 204, 0.1); /* Silver Metal border */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid color-mix(in srgb, var(--color-silver-metal) 10%, transparent);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(31,35,40,0.6) 0%, rgba(13,13,15,0.8) 100%);
-  border: 1px solid rgba(184, 134, 43, 0.15); /* Royal Gold subtle border */
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-charcoal) 60%, transparent) 0%, color-mix(in srgb, var(--color-onyx-black) 80%, transparent) 100%);
+  border: 1px solid color-mix(in srgb, var(--color-royal-gold) 15%, transparent);
   backdrop-filter: blur(10px);
 }
 
@@ -100,4 +107,8 @@ body {
 @keyframes slide-up {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
 }

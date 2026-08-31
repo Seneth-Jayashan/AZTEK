@@ -27,7 +27,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection>
             <div className="mb-16 text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">The Aztec Connection</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">The Aztec Connection</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-copper)] mb-8 mx-auto md:mx-0"></div>
               <p className="text-[var(--color-silver-metal)] text-xl mb-8 max-w-4xl leading-relaxed">
                 The name AZTEK binds our diverse sectors together under a single narrative of pioneer-level engineering, resourcefulness, and master craftsmanship. The Aztec civilization is renowned for three distinct pillars that map directly onto our business verticals:
@@ -72,7 +72,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <AnimatedSection>
               <div className="bg-[var(--color-onyx-black)] p-10 rounded-2xl h-full border border-[var(--color-royal-gold)]/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Our Vision</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Vision</h2>
                 <p className="text-[var(--color-silver-metal)] leading-relaxed text-lg mb-6">
                   To redefine modern architecture through precision-engineered aluminum solutions, transforming complex blueprints into durable, high-end interior and exterior spaces.
                 </p>
@@ -82,7 +82,7 @@ export default function About() {
             
             <AnimatedSection delay={0.2}>
               <div className="bg-[var(--color-onyx-black)] p-10 rounded-2xl h-full border border-[var(--color-royal-gold)]/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why Choose Us</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Why Choose Us</h2>
                 <ul className="space-y-6">
                   {[
                     "Uncompromising Quality: Zero-defect checks.",

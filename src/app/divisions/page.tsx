@@ -45,7 +45,7 @@ export default function DivisionsPage() {
                 The flagship division managing all large-scale, high-end commercial aluminium and glass fabrication across the country. We mirror the Aztec spirit of structural precision and durability.
               </p>
               
-              <h3 className="text-xl font-bold mb-4 text-white">Key Capabilities:</h3>
+              <h3 className="text-xl font-bold mb-4 text-foreground">Key Capabilities:</h3>
               <ul className="space-y-4">
                 {[
                   "Architectural Glass & Aluminum shopfronts",
@@ -86,7 +86,7 @@ export default function DivisionsPage() {
                 Inspired by the advanced chinampas of the Aztecs, Agrotec focuses on automated hydro-agricultural systems to maximize crop yields in limited spaces through technological innovation.
               </p>
               
-              <h3 className="text-xl font-bold mb-4 text-white">Key Capabilities:</h3>
+              <h3 className="text-xl font-bold mb-4 text-foreground">Key Capabilities:</h3>
               <ul className="space-y-4">
                 {[
                   "Automated hydroponic and aeroponic systems",
@@ -127,7 +127,7 @@ export default function DivisionsPage() {
                 Paying homage to Aztec toolmaking traditions, this division manufactures custom hardware accessories and fabrication tools locally to reduce reliance on imports and ensure quality.
               </p>
               
-              <h3 className="text-xl font-bold mb-4 text-white">Key Capabilities:</h3>
+              <h3 className="text-xl font-bold mb-4 text-foreground">Key Capabilities:</h3>
               <ul className="space-y-4">
                 {[
                   "Local manufacturing of specialized hardware",

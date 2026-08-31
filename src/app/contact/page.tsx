@@ -30,7 +30,7 @@ export default function ContactPage() {
             
             {/* Contact Info */}
             <AnimatedSection>
-              <h2 className="text-3xl font-bold mb-8 text-white">Get In Touch</h2>
+              <h2 className="text-3xl font-bold mb-8 text-foreground">Get In Touch</h2>
               <p className="text-[var(--color-silver-metal)] mb-10 leading-relaxed text-lg">
                 Whether you need precision engineering, smart agricultural setups, or custom hardware, our team is ready to deliver master craftsmanship.
               </p>
@@ -41,9 +41,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-1">Phone</h3>
-                    <p className="text-[var(--color-silver-metal)]">+94 77 123 4567</p>
-                    <p className="text-[var(--color-silver-metal)]">+94 11 234 5678</p>
+                    <h3 className="font-bold text-foreground text-lg mb-1">Phone</h3>
+                    <p className="text-[var(--color-silver-metal)]">0772 960 591</p>
+                    <p className="text-[var(--color-silver-metal)]">077 1375 422</p>
                   </div>
                 </div>
                 
@@ -52,9 +52,8 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-1">Email</h3>
-                    <p className="text-[var(--color-silver-metal)]">info@aztek.lk</p>
-                    <p className="text-[var(--color-silver-metal)]">sales@aztek.lk</p>
+                    <h3 className="font-bold text-foreground text-lg mb-1">Email</h3>
+                    <p className="text-[var(--color-silver-metal)]">azteklanka@gmail.com</p>
                   </div>
                 </div>
                 
@@ -63,10 +62,10 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-1">Location</h3>
+                    <h3 className="font-bold text-foreground text-lg mb-1">Location</h3>
                     <p className="text-[var(--color-silver-metal)]">
-                      123 Engineering Avenue<br />
-                      Colombo 03, Sri Lanka
+                      82/4 Salawawaththa Road<br />
+                      Makuluduwa, Piliyandala
                     </p>
                   </div>
                 </div>
@@ -83,7 +82,7 @@ export default function ContactPage() {
                       <label htmlFor="firstName" className="text-sm font-medium text-[var(--color-silver-metal)]">First name</label>
                       <input 
                         id="firstName" 
-                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
                         placeholder="John"
                       />
                     </div>
@@ -91,7 +90,7 @@ export default function ContactPage() {
                       <label htmlFor="lastName" className="text-sm font-medium text-[var(--color-silver-metal)]">Last name</label>
                       <input 
                         id="lastName" 
-                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
                         placeholder="Doe"
                       />
                     </div>
@@ -102,7 +101,7 @@ export default function ContactPage() {
                     <input 
                       id="email" 
                       type="email"
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -111,7 +110,7 @@ export default function ContactPage() {
                     <label htmlFor="division" className="text-sm font-medium text-[var(--color-silver-metal)]">Inquiry For</label>
                     <select 
                       id="division"
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors appearance-none"
+                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors appearance-none"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="alucore">AZTEK Alucore (Engineering)</option>
@@ -125,12 +124,12 @@ export default function ContactPage() {
                     <textarea 
                       id="message" 
                       rows={4}
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors resize-none"
+                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors resize-none"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
                   
-                  <button type="button" className="w-full py-4 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-[var(--color-onyx-black)] rounded-md font-bold transition-colors flex items-center justify-center shadow-[0_0_15px_rgba(184,134,43,0.3)]">
+                  <button type="button" className="w-full py-4 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-md font-bold transition-colors flex items-center justify-center shadow-[0_0_15px_rgba(184,134,43,0.3)]">
                     Send Message
                     <Send className="w-4 h-4 ml-2" />
                   </button>

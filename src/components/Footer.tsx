@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
@@ -12,9 +13,20 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <span className="text-3xl font-extrabold tracking-widest text-gradient-gold">
-                AZTEK
-              </span>
+              <Image 
+                src="/Logo_light.png" 
+                alt="AZTEK Logo" 
+                width={150} 
+                height={50} 
+                className="hidden dark:block object-contain"
+              />
+              <Image 
+                src="/Logo_dark.png" 
+                alt="AZTEK Logo" 
+                width={150} 
+                height={50} 
+                className="block dark:hidden object-contain"
+              />
             </Link>
             <p className="text-[var(--color-silver-metal)] mt-4 max-w-xs leading-relaxed">
               Bold like a lion. Built in aluminium. Designed to last. Engineering, Agriculture, and Manufacturing excellence.
@@ -41,7 +53,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-foreground uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Divisions', 'Projects', 'Careers', 'Contact'].map((link) => (
                 <li key={link}>
@@ -56,7 +68,7 @@ export default function Footer() {
 
           {/* Divisions */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Divisions</h3>
+            <h3 className="text-lg font-bold mb-6 text-foreground uppercase tracking-wider">Divisions</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/divisions#alucore" className="text-[var(--color-silver-metal)] hover:text-[var(--color-aluminium)] transition-colors flex items-center gap-2">
@@ -81,19 +93,19 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-6 text-foreground uppercase tracking-wider">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-[var(--color-silver-metal)]">
                 <MapPin className="text-[var(--color-royal-gold)] shrink-0 mt-1" size={18} />
-                <span>123 Engineering Avenue,<br />Colombo 03, Sri Lanka</span>
+                <span>82/4 Salawawaththa Road,<br />Makuluduwa, Piliyandala</span>
               </li>
               <li className="flex items-center gap-3 text-[var(--color-silver-metal)]">
                 <Phone className="text-[var(--color-royal-gold)] shrink-0" size={18} />
-                <span>+94 77 123 4567</span>
+                <span>0772 960 591 / 077 1375 422</span>
               </li>
               <li className="flex items-center gap-3 text-[var(--color-silver-metal)]">
                 <Mail className="text-[var(--color-royal-gold)] shrink-0" size={18} />
-                <span>info@aztek.lk</span>
+                <span>azteklanka@gmail.com</span>
               </li>
             </ul>
           </div>
