@@ -1,22 +1,21 @@
+"use client";
+
 import AnimatedSection from "@/components/AnimatedSection";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
-export const metadata = {
-  title: "Contact Us | AZTEK",
-  description: "Get in touch with AZTEK for engineering, agriculture, and manufacturing inquiries.",
-};
-
 export default function ContactPage() {
   return (
-    <div className="flex flex-col min-h-screen pt-24 bg-[var(--color-onyx-black)]">
-      
+    <div className="flex flex-col min-h-screen bg-[var(--color-onyx-black)]">
+
       {/* Page Header */}
-      <ParallaxSection className="py-20 md:py-32 border-b border-[var(--color-royal-gold)]/20" overlayClass="bg-[var(--color-charcoal)]/80">
+      <ParallaxSection className="py-24 md:py-40 border-b border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-black via-black/80 to-[var(--color-onyx-black)]">
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-gold">Contact AZTEK</h1>
-            <p className="text-xl text-[var(--color-silver-metal)] max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-white uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+              Contact AZTEK
+            </h1>
+            <p className="text-xl md:text-2xl text-[var(--color-silver-metal)] max-w-3xl mx-auto font-light leading-relaxed bg-black/20 p-4 rounded-xl backdrop-blur-sm">
               Reach out to discuss your next project, explore partnerships, or learn more about our divisions.
             </p>
           </AnimatedSection>
@@ -24,114 +23,129 @@ export default function ContactPage() {
       </ParallaxSection>
 
       {/* Contact Content */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-32 bg-[var(--color-onyx-black)] relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_bottom,rgba(184,134,43,0.1)_0%,rgba(0,0,0,0)_70%)]"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            {/* Contact Info */}
+            {/* Contact Information */}
             <AnimatedSection>
-              <h2 className="text-3xl font-bold mb-8 text-foreground">Get In Touch</h2>
-              <p className="text-[var(--color-silver-metal)] mb-10 leading-relaxed text-lg">
-                Whether you need precision engineering, smart agricultural setups, or custom hardware, our team is ready to deliver master craftsmanship.
-              </p>
-              
+              <div className="mb-12">
+                <h2 className="text-4xl md:text-5xl font-black mb-6 text-white uppercase tracking-tighter">Get in Touch</h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-royal-gold)] to-transparent mb-8"></div>
+                <p className="text-[var(--color-silver-metal)] text-lg mb-10 font-light leading-relaxed">
+                  Whether you're looking for high-end aluminium fabrication, smart agricultural solutions, or custom manufacturing, AZTEK is ready to deliver.
+                </p>
+              </div>
+
               <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-royal-gold)]/10 border border-[var(--color-royal-gold)]/30 flex items-center justify-center text-[var(--color-champagne)] mr-6 shrink-0">
-                    <Phone className="w-5 h-5" />
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 rounded-full bg-black/40 flex items-center justify-center mr-6 shrink-0 border border-[var(--color-royal-gold)]/20 group-hover:bg-[var(--color-royal-gold)]/20 group-hover:border-[var(--color-royal-gold)]/50 group-hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                    <MapPin className="w-6 h-6 text-[var(--color-champagne)]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground text-lg mb-1">Phone</h3>
-                    <p className="text-[var(--color-silver-metal)]">0772 960 591</p>
-                    <p className="text-[var(--color-silver-metal)]">077 1375 422</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-silver-metal)]/10 border border-[var(--color-silver-metal)]/30 flex items-center justify-center text-[var(--color-aluminium)] mr-6 shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground text-lg mb-1">Email</h3>
-                    <p className="text-[var(--color-silver-metal)]">azteklanka@gmail.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-copper)]/10 border border-[var(--color-copper)]/30 flex items-center justify-center text-[var(--color-copper)] mr-6 shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground text-lg mb-1">Location</h3>
-                    <p className="text-[var(--color-silver-metal)]">
+                    <h3 className="text-xl font-bold mb-2 text-white uppercase tracking-wider">Headquarters</h3>
+                    <p className="text-[var(--color-silver-metal)] font-light leading-relaxed">
                       82/4 Salawawaththa Road<br />
                       Makuluduwa, Piliyandala
                     </p>
                   </div>
                 </div>
+
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 rounded-full bg-black/40 flex items-center justify-center mr-6 shrink-0 border border-[var(--color-royal-gold)]/20 group-hover:bg-[var(--color-royal-gold)]/20 group-hover:border-[var(--color-royal-gold)]/50 group-hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                    <Phone className="w-6 h-6 text-[var(--color-champagne)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-white uppercase tracking-wider">Phone</h3>
+                    <p className="text-[var(--color-silver-metal)] font-light leading-relaxed">
+                      0772 960 591<br />
+                      077 1375 422
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 rounded-full bg-black/40 flex items-center justify-center mr-6 shrink-0 border border-[var(--color-royal-gold)]/20 group-hover:bg-[var(--color-royal-gold)]/20 group-hover:border-[var(--color-royal-gold)]/50 group-hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                    <Mail className="w-6 h-6 text-[var(--color-champagne)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-white uppercase tracking-wider">Email</h3>
+                    <p className="text-[var(--color-silver-metal)] font-light leading-relaxed">
+                      azteklanka@gmail.com
+                    </p>
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
-            
+
             {/* Contact Form */}
             <AnimatedSection delay={0.2}>
-              <div className="glass-card p-8 md:p-10 rounded-2xl border border-[var(--color-royal-gold)]/20 shadow-2xl">
-                <h3 className="text-2xl font-bold mb-6 text-gradient-gold">Send us a message</h3>
-                <form className="space-y-6">
+              <div className="glass-card p-10 md:p-14 rounded-[2rem] border border-[var(--color-royal-gold)]/20 shadow-[0_0_40px_rgba(0,0,0,0.8)] relative overflow-hidden bg-black/40">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(184,134,43,0.1)_0%,rgba(0,0,0,0)_60%)]"></div>
+                <h3 className="text-3xl font-black mb-8 text-white uppercase tracking-wider relative z-10">Send a Message</h3>
+                
+                <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="firstName" className="text-sm font-medium text-[var(--color-silver-metal)]">First name</label>
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">First Name</label>
                       <input 
+                        type="text" 
                         id="firstName" 
-                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                        className="w-full bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                         placeholder="John"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="lastName" className="text-sm font-medium text-[var(--color-silver-metal)]">Last name</label>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Last Name</label>
                       <input 
+                        type="text" 
                         id="lastName" 
-                        className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                        className="w-full bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                         placeholder="Doe"
                       />
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-[var(--color-silver-metal)]">Email</label>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Email Address</label>
                     <input 
+                      type="email" 
                       id="email" 
-                      type="email"
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors"
+                      className="w-full bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                       placeholder="john@example.com"
                     />
                   </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="division" className="text-sm font-medium text-[var(--color-silver-metal)]">Inquiry For</label>
+
+                  <div>
+                    <label htmlFor="division" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Interested Division</label>
                     <select 
-                      id="division"
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors appearance-none"
+                      id="division" 
+                      className="w-full bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light appearance-none"
                     >
-                      <option value="general">General Inquiry</option>
-                      <option value="alucore">AZTEK Alucore (Engineering)</option>
-                      <option value="agrotec">AZTEK Agrotec (Agriculture)</option>
-                      <option value="lanka">AZTEK Lanka (Manufacturing)</option>
+                      <option value="general" className="bg-[var(--color-onyx-black)] text-white">General Inquiry</option>
+                      <option value="alucore" className="bg-[var(--color-onyx-black)] text-white">AZTEK Alucore (Engineering & Fab)</option>
+                      <option value="agrotec" className="bg-[var(--color-onyx-black)] text-white">AZTEK Agrotec (Smart Agriculture)</option>
+                      <option value="lanka" className="bg-[var(--color-onyx-black)] text-white">AZTEK Lanka (Manufacturing)</option>
                     </select>
                   </div>
                   
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-[var(--color-silver-metal)]">Message</label>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Message</label>
                     <textarea 
                       id="message" 
-                      rows={4}
-                      className="w-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] rounded-md px-4 py-3 text-foreground focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-colors resize-none"
-                      placeholder="Tell us about your project..."
+                      rows={4} 
+                      className="w-full bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light resize-none"
+                      placeholder="How can we help you?"
                     ></textarea>
                   </div>
                   
-                  <button type="button" className="w-full py-4 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-md font-bold transition-colors flex items-center justify-center shadow-[0_0_15px_rgba(184,134,43,0.3)]">
+                  <button 
+                    type="submit" 
+                    className="w-full py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-xl font-black text-lg uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(184,134,43,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] flex items-center justify-center group"
+                  >
                     Send Message
-                    <Send className="w-4 h-4 ml-2" />
+                    <Send className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>
               </div>
