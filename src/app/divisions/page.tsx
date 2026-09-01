@@ -2,8 +2,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import ParallaxSection from "@/components/ParallaxSection";
 import { Building2, Leaf, Wrench, CheckCircle2 } from "lucide-react";
 
-export const metadata = {
-  title: "Divisions | AZTEK",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Divisions",
   description: "Explore the three pillars of AZTEK: Alucore (Engineering), Agrotec (Agriculture), and Lanka (Manufacturing).",
 };
 
@@ -12,13 +14,13 @@ export default function DivisionsPage() {
     <div className="flex flex-col min-h-screen bg-[var(--color-onyx-black)]">
 
       {/* Page Header */}
-      <ParallaxSection className="py-24 md:py-40 border-b border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-black via-black/80 to-[var(--color-onyx-black)]">
+      <ParallaxSection className="py-24 md:py-40 border-b border-[var(--color-royal-gold)]/20" overlayClass="bg-gradient-to-b from-white via-white/80 dark:from-black dark:via-black/80 to-[var(--color-onyx-black)]">
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-white uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+            <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
               Our Divisions
             </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-silver-metal)] max-w-3xl mx-auto font-light leading-relaxed bg-black/20 p-4 rounded-xl backdrop-blur-sm">
+            <p className="text-xl md:text-2xl text-[var(--color-silver-metal)] max-w-3xl mx-auto font-light leading-relaxed bg-white/40 dark:bg-black/20 p-4 rounded-xl backdrop-blur-sm">
               Three specialized branches operating under a single narrative of engineering, resourcefulness, and craftsmanship.
             </p>
           </AnimatedSection>
@@ -44,13 +46,13 @@ export default function DivisionsPage() {
                 <span className="flex h-2.5 w-2.5 rounded-full bg-[var(--color-silver-metal)] mr-3 shadow-[0_0_10px_rgba(166,168,173,0.8)] animate-pulse"></span>
                 Engineering & Fabrication
               </div>
-              <h2 className="text-4xl md:text-6xl font-black mb-6 text-white uppercase tracking-tighter">AZTEK Alucore</h2>
+              <h2 className="text-4xl md:text-6xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">AZTEK Alucore</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-silver-metal)] to-[var(--color-aluminium)] mb-8"></div>
               <p className="text-xl text-[var(--color-silver-metal)] mb-10 leading-relaxed font-light">
                 The flagship division managing all large-scale, high-end commercial aluminium and glass fabrication across the country. We mirror the Aztec spirit of structural precision and durability.
               </p>
 
-              <h3 className="text-2xl font-black mb-6 text-white uppercase tracking-wider">Key Capabilities</h3>
+              <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider">Key Capabilities</h3>
               <ul className="space-y-6">
                 {[
                   "Architectural Glass & Aluminum shopfronts",
@@ -72,7 +74,7 @@ export default function DivisionsPage() {
       </section>
 
       {/* AZTEK Agrotec */}
-      <section id="agrotec" className="py-32 bg-black border-b border-[var(--color-royal-gold)]/20 relative overflow-hidden">
+      <section id="agrotec" className="py-32 bg-background dark:bg-black border-b border-[var(--color-royal-gold)]/20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_right,rgba(76,175,80,0.05)_0%,rgba(0,0,0,0)_70%)]"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse">
@@ -90,13 +92,13 @@ export default function DivisionsPage() {
                 <span className="flex h-2.5 w-2.5 rounded-full bg-[#4CAF50] mr-3 shadow-[0_0_10px_rgba(76,175,80,0.8)] animate-pulse"></span>
                 Smart Agriculture
               </div>
-              <h2 className="text-4xl md:text-6xl font-black mb-6 text-white uppercase tracking-tighter">AZTEK Agrotec</h2>
+              <h2 className="text-4xl md:text-6xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">AZTEK Agrotec</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[#4CAF50] to-[var(--color-champagne)] mb-8"></div>
               <p className="text-xl text-[var(--color-silver-metal)] mb-10 leading-relaxed font-light">
                 Inspired by the advanced chinampas of the Aztecs, Agrotec focuses on automated hydro-agricultural systems to maximize crop yields in limited spaces through technological innovation.
               </p>
 
-              <h3 className="text-2xl font-black mb-6 text-white uppercase tracking-wider">Key Capabilities</h3>
+              <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider">Key Capabilities</h3>
               <ul className="space-y-6">
                 {[
                   "Automated hydroponic and aeroponic systems",
@@ -136,13 +138,13 @@ export default function DivisionsPage() {
                 <span className="flex h-2.5 w-2.5 rounded-full bg-[var(--color-copper)] mr-3 shadow-[0_0_10px_rgba(194,106,46,0.8)] animate-pulse"></span>
                 Toolmaking & Manufacturing
               </div>
-              <h2 className="text-4xl md:text-6xl font-black mb-6 text-white uppercase tracking-tighter">AZTEK Lanka</h2>
+              <h2 className="text-4xl md:text-6xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">AZTEK Lanka</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-copper)] to-[var(--color-royal-gold)] mb-8"></div>
               <p className="text-xl text-[var(--color-silver-metal)] mb-10 leading-relaxed font-light">
                 Paying homage to Aztec toolmaking traditions, this division manufactures custom hardware accessories and fabrication tools locally to reduce reliance on imports and ensure quality.
               </p>
 
-              <h3 className="text-2xl font-black mb-6 text-white uppercase tracking-wider">Key Capabilities</h3>
+              <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider">Key Capabilities</h3>
               <ul className="space-y-6">
                 {[
                   "Local manufacturing of specialized hardware",

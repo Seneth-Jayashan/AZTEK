@@ -113,7 +113,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-[var(--color-steel-grey)]/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[var(--color-steel-grey)]">
-          <p>&copy; {currentYear} AZTEK Group. All rights reserved.</p>
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <p>&copy; {currentYear} AZTEK Group. All rights reserved.</p>
+            <p>Developed by <a href="https://onexuniverse.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-royal-gold)] transition-colors">One X Universe (Pvt) Ltd</a></p>
+          </div>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-[var(--color-royal-gold)] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[var(--color-royal-gold)] transition-colors">Terms of Service</Link>

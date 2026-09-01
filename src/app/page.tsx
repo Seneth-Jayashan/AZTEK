@@ -4,6 +4,12 @@ import ParallaxSection from "@/components/ParallaxSection";
 import { ShieldCheck, Layers, Award, Leaf, Cpu, Wrench, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to AZTEK. We specialize in Aluminum Fabrication, Smart Agriculture, and Manufacturing.",
+};
 
 export default function Home() {
   return (
@@ -13,15 +19,15 @@ export default function Home() {
       {/* Intro Parallax Section */}
       <ParallaxSection 
         backgroundImage="/images/image-2.jpeg"
-        overlayClass="bg-black/80 backdrop-blur-sm"
+        overlayClass="bg-white/80 dark:bg-black/80 backdrop-blur-sm"
         className="py-32 border-y border-[var(--color-royal-gold)]/30"
       >
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-white tracking-tighter uppercase drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white tracking-tighter uppercase drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
               Bold like a lion. <br className="md:hidden" /> Built in aluminium.
             </h2>
-            <p className="text-white max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light backdrop-blur-sm bg-black/10 p-4 rounded-xl">
+            <p className="text-foreground dark:text-white max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light backdrop-blur-sm bg-white/40 dark:bg-black/10 p-4 rounded-xl">
               We draw inspiration from the Aztec civilization's pioneer-level engineering, resourcefulness, and master craftsmanship to construct complex architectural marvels and innovative agricultural solutions.
             </p>
           </AnimatedSection>
@@ -29,13 +35,13 @@ export default function Home() {
       </ParallaxSection>
 
       {/* Core Pillars Section */}
-      <section className="py-32 bg-black relative overflow-hidden">
+      <section className="py-32 bg-background dark:bg-black relative overflow-hidden">
         {/* Subtle background image */}
         <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_top,rgba(184,134,43,0.15)_0%,rgba(0,0,0,0)_70%)]"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <AnimatedSection>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-black mb-4 tracking-tighter uppercase text-white">Our Core Pillars</h2>
+              <h2 className="text-5xl md:text-6xl font-black mb-4 tracking-tighter uppercase text-foreground dark:text-white">Our Core Pillars</h2>
               <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-[var(--color-royal-gold)] to-transparent mx-auto mb-8"></div>
               <p className="text-[var(--color-silver-metal)] max-w-2xl mx-auto text-lg md:text-xl font-light">
                 The foundation of AZTEK is built upon uncompromising quality, comprehensive solutions, and industry-leading standards.
@@ -48,7 +54,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-royal-gold)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
               <div className="relative z-10">
                 <ShieldCheck className="w-16 h-16 text-[var(--color-royal-gold)] mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(184,134,43,0.5)]" />
-                <h3 className="text-2xl font-bold mb-4 text-white uppercase tracking-wider">Precision & Durability</h3>
+                <h3 className="text-2xl font-bold mb-4 text-foreground dark:text-white uppercase tracking-wider">Precision & Durability</h3>
                 <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
                   Engineered to exact tolerances for long-term structural performance. We guarantee zero-defect checks for standard, export-ready products.
                 </p>
@@ -59,7 +65,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brushed-silver)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
               <div className="relative z-10">
                 <Layers className="w-16 h-16 text-[var(--color-silver-metal)] mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 drop-shadow-[0_0_15px_rgba(166,168,173,0.5)]" />
-                <h3 className="text-2xl font-bold mb-4 text-white uppercase tracking-wider">End-to-End Scope</h3>
+                <h3 className="text-2xl font-bold mb-4 text-foreground dark:text-white uppercase tracking-wider">End-to-End Scope</h3>
                 <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
                   Single-source delivery covering ceilings, i-panels, shopfronts, glass railings, and custom fixtures from site visit to final handover.
                 </p>
@@ -70,7 +76,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-copper)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
               <div className="relative z-10">
                 <Award className="w-16 h-16 text-[var(--color-copper)] mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(194,106,46,0.5)]" />
-                <h3 className="text-2xl font-bold mb-4 text-white uppercase tracking-wider">Architectural Standard</h3>
+                <h3 className="text-2xl font-bold mb-4 text-foreground dark:text-white uppercase tracking-wider">Architectural Standard</h3>
                 <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
                   Setting the industry benchmark for quality across commercial and residential projects, trusted by corporate leaders like Pyramid Lanka.
                 </p>
@@ -81,13 +87,13 @@ export default function Home() {
       </section>
 
       {/* Divisions Section */}
-      <section className="py-32 bg-black relative border-y border-[var(--color-royal-gold)]/20">
+      <section className="py-32 bg-background dark:bg-black relative border-y border-[var(--color-royal-gold)]/20">
         <div className="absolute inset-0 z-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-[0.05]"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <AnimatedSection>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-white">Three Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-champagne)]">Growth</span></h2>
+                <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-foreground dark:text-white">Three Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-champagne)]">Growth</span></h2>
                 <div className="h-[2px] w-24 bg-[var(--color-royal-gold)] mb-8"></div>
                 <p className="text-[var(--color-silver-metal)] text-xl font-light">
                   Expanding our horizons from specialized fabrication into smart agriculture and localized manufacturing.
@@ -103,18 +109,18 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <AnimatedSection delay={0.1} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
               <Image src="/images/image-6.jpeg" alt="AZTEK Alucore" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
               
-              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-silver-metal)]/40 shadow-[0_0_20px_rgba(166,168,173,0.3)]">
+              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-silver-metal)]/40 shadow-[0_0_20px_rgba(166,168,173,0.3)]">
                 <Wrench className="w-8 h-8 text-[var(--color-brushed-silver)]" />
               </div>
 
               <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-wider">AZTEK Alucore</h3>
+                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Alucore</h3>
                 <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
                   Managing all large-scale, high-end commercial aluminium and glass fabrication across the country.
                 </p>
-                <Link href="/divisions#alucore" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-white/5 backdrop-blur-md border border-[var(--color-silver-metal)]/30 hover:border-transparent text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
+                <Link href="/divisions#alucore" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-[var(--color-silver-metal)]/30 hover:border-transparent text-foreground dark:text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
                   <span className="absolute inset-0 bg-[var(--color-silver-metal)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></span>
                   <span className="relative z-10 group-hover/btn:text-black transition-colors duration-300">Learn More</span>
                 </Link>
@@ -123,18 +129,18 @@ export default function Home() {
 
             <AnimatedSection delay={0.2} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
               <Image src="/images/image-13.jpeg" alt="AZTEK Agrotec" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
               
-              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[#4CAF50]/40 shadow-[0_0_20px_rgba(76,175,80,0.3)]">
+              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[#4CAF50]/40 shadow-[0_0_20px_rgba(76,175,80,0.3)]">
                 <Leaf className="w-8 h-8 text-[#4CAF50]" />
               </div>
 
               <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-wider">AZTEK Agrotec</h3>
+                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Agrotec</h3>
                 <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
                   Smart agriculture division focusing on automated hydroponics, aeroponics, and GMO applications to maximize yield.
                 </p>
-                <Link href="/divisions#agrotec" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-white/5 backdrop-blur-md border border-[#4CAF50]/30 hover:border-transparent text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
+                <Link href="/divisions#agrotec" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-[#4CAF50]/30 hover:border-transparent text-foreground dark:text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
                   <span className="absolute inset-0 bg-[#4CAF50] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></span>
                   <span className="relative z-10 group-hover/btn:text-black transition-colors duration-300">Learn More</span>
                 </Link>
@@ -143,18 +149,18 @@ export default function Home() {
 
             <AnimatedSection delay={0.3} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
               <Image src="/images/image-14.jpeg" alt="AZTEK Lanka" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
               
-              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-copper)]/40 shadow-[0_0_20px_rgba(194,106,46,0.3)]">
+              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-copper)]/40 shadow-[0_0_20px_rgba(194,106,46,0.3)]">
                 <Cpu className="w-8 h-8 text-[var(--color-copper)]" />
               </div>
 
               <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-wider">AZTEK Lanka</h3>
+                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Lanka</h3>
                 <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
                   Manufacturing custom hardware accessories and fabrication tools locally to reduce reliance on costly imports.
                 </p>
-                <Link href="/divisions#lanka" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-white/5 backdrop-blur-md border border-[var(--color-copper)]/30 hover:border-transparent text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
+                <Link href="/divisions#lanka" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-[var(--color-copper)]/30 hover:border-transparent text-foreground dark:text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
                   <span className="absolute inset-0 bg-[var(--color-copper)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></span>
                   <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">Learn More</span>
                 </Link>
@@ -167,18 +173,18 @@ export default function Home() {
       {/* CTA Section */}
       <ParallaxSection 
         backgroundImage="/images/image-10.jpeg"
-        overlayClass="bg-black/80 backdrop-blur-md"
+        overlayClass="bg-white/80 dark:bg-black/80 backdrop-blur-md"
         className="py-40 border-t border-[var(--color-royal-gold)]/30"
       >
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
-            <div className="inline-block mb-8 px-6 py-2 border border-[var(--color-royal-gold)]/50 rounded-full bg-black/50 backdrop-blur-md text-[var(--color-royal-gold)] uppercase tracking-[0.3em] text-sm font-bold shadow-[0_0_20px_rgba(184,134,43,0.2)]">
+            <div className="inline-block mb-8 px-6 py-2 border border-[var(--color-royal-gold)]/50 rounded-full bg-white/50 dark:bg-black/50 backdrop-blur-md text-[var(--color-royal-gold)] uppercase tracking-[0.3em] text-sm font-bold shadow-[0_0_20px_rgba(184,134,43,0.2)]">
               Start Your Journey
             </div>
-            <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black mb-8 text-white uppercase tracking-tighter leading-[0.9]">
-              Ready to Build the <br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-white drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">Future?</span>
+            <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black mb-8 text-foreground dark:text-white uppercase tracking-tighter leading-[0.9]">
+              Ready to Build the <br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">Future?</span>
             </h2>
-            <p className="text-[var(--color-silver-metal)] text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light bg-black/20 p-4 rounded-xl backdrop-blur-sm">
+            <p className="text-[var(--color-silver-metal)] text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light bg-white/40 dark:bg-black/20 p-4 rounded-xl backdrop-blur-sm">
               Partner with AZTEK for your next architectural, fabrication, or smart agriculture project. Let's create something extraordinary together.
             </p>
             <Link
