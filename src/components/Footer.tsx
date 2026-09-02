@@ -13,18 +13,18 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <Image 
-                src="/Logo_light.png" 
-                alt="AZTEK Logo" 
-                width={150} 
-                height={50} 
+              <Image
+                src="/Logo_light.png"
+                alt="AZTEK Logo"
+                width={150}
+                height={50}
                 className="hidden dark:block object-contain"
               />
-              <Image 
-                src="/Logo_dark.png" 
-                alt="AZTEK Logo" 
-                width={150} 
-                height={50} 
+              <Image
+                src="/Logo_dark.png"
+                alt="AZTEK Logo"
+                width={150}
+                height={50}
                 className="block dark:hidden object-contain"
               />
             </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6 text-foreground uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Divisions', 'Projects', 'Careers', 'Contact'].map((link) => (
+              {['Home', 'About Us', 'Divisions', 'Projects', 'Services', 'Contact'].map((link) => (
                 <li key={link}>
                   <Link href={`/${link.toLowerCase().replace(' ', '-') === 'home' ? '' : link.toLowerCase().replace(' ', '-')}`} className="text-[var(--color-silver-metal)] hover:text-[var(--color-royal-gold)] transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-royal-gold)]/50"></span>
