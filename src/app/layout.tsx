@@ -11,21 +11,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aztek.lk"),
+  metadataBase: new URL("https://cac.lk"),
   title: {
     default: "CAC | Chamathkara Alu Creations",
     template: "%s | CAC",
   },
   description: "Chamathkara Alu Creations is a leading provider of precision-engineered aluminum solutions and local hardware purchasing in Sri Lanka.",
-  keywords: ["Aluminum Fabrication Sri Lanka", "CAC", "Chamathkara Alu Creations", "Architectural Solutions", "Local Hardware Purchasing", "Commercial Glass Fabrication", "CAC Alucore", "CAC Lanka", "High-End Aluminum"],
+  keywords: ["Aluminum Fabrication", "Sri Lanka Manufacturing", "CAC Alucore", "CAC Lanka", "Architectural Solutions"],
   openGraph: {
     title: "CAC | Chamathkara Alu Creations",
     description: "Chamathkara Alu Creations is a leading provider of precision-engineered aluminum solutions and local hardware purchasing in Sri Lanka.",
-    url: "https://aztek.lk",
+    url: "https://cac.lk",
     siteName: "CAC",
     images: [
       {
-        url: "/Logo_dark.png", 
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "CAC Group Logo",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CAC | Chamathkara Alu Creations",
     description: "Precision-engineered aluminum solutions and local purchasing in Sri Lanka.",
-    images: ["/Logo_dark.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,

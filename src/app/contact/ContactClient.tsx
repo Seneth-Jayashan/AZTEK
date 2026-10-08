@@ -27,7 +27,7 @@ export default function ContactClient() {
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_bottom,rgba(184,134,43,0.1)_0%,rgba(0,0,0,0)_70%)]"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
+
             {/* Contact Information */}
             <AnimatedSection>
               <div className="mb-12">
@@ -72,7 +72,7 @@ export default function ContactClient() {
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white uppercase tracking-wider">Email</h3>
                     <p className="text-[var(--color-silver-metal)] font-light leading-relaxed">
-                      azteklanka@gmail.com
+                      cac@gmail.com
                     </p>
                   </div>
                 </div>
@@ -84,34 +84,34 @@ export default function ContactClient() {
               <div className="glass-card p-10 md:p-14 rounded-[2rem] border border-[var(--color-royal-gold)]/20 shadow-[0_0_40px_rgba(0,0,0,0.8)] relative overflow-hidden bg-white/40 dark:bg-black/40">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(184,134,43,0.1)_0%,rgba(0,0,0,0)_60%)]"></div>
                 <h3 className="text-3xl font-black mb-8 text-foreground dark:text-white uppercase tracking-wider relative z-10">Send a Message</h3>
-                
+
                 <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">First Name</label>
-                      <input 
-                        type="text" 
-                        id="firstName" 
+                      <input
+                        type="text"
+                        id="firstName"
                         className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                         placeholder="John"
                       />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Last Name</label>
-                      <input 
-                        type="text" 
-                        id="lastName" 
+                      <input
+                        type="text"
+                        id="lastName"
                         className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                         placeholder="Doe"
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="email" 
+                    <input
+                      type="email"
+                      id="email"
                       className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light"
                       placeholder="john@example.com"
                     />
@@ -119,8 +119,8 @@ export default function ContactClient() {
 
                   <div>
                     <label htmlFor="division" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Interested Division</label>
-                    <select 
-                      id="division" 
+                    <select
+                      id="division"
                       className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light appearance-none"
                     >
                       <option value="general" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">General Inquiry</option>
@@ -128,19 +128,19 @@ export default function ContactClient() {
                       <option value="lanka" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">CAC Lanka (Purchasing Items)</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-[var(--color-silver-metal)] mb-2 uppercase tracking-wider">Message</label>
-                    <textarea 
-                      id="message" 
-                      rows={4} 
+                    <textarea
+                      id="message"
+                      rows={4}
                       className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light resize-none"
                       placeholder="How can we help you?"
                     ></textarea>
                   </div>
-                  
-                  <button 
-                    type="submit" 
+
+                  <button
+                    type="submit"
                     className="w-full py-5 bg-[var(--color-royal-gold)] hover:bg-[var(--color-champagne)] text-black rounded-xl font-black text-lg uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(184,134,43,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] flex items-center justify-center group"
                   >
                     Send Message
