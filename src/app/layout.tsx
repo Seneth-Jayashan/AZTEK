@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | CAC",
   },
   description: "Chamathkara Alu Creations is a leading provider of precision-engineered aluminum solutions and local hardware purchasing in Sri Lanka.",
-  keywords: ["Aluminum Fabrication", "Sri Lanka Manufacturing", "CAC Alucore", "CAC Lanka", "Architectural Solutions"],
+  keywords: ["Aluminum Fabrication Sri Lanka", "CAC", "Chamathkara Alu Creations", "Architectural Solutions", "Local Hardware Purchasing", "Commercial Glass Fabrication", "CAC Alucore", "CAC Lanka", "High-End Aluminum"],
   openGraph: {
     title: "CAC | Chamathkara Alu Creations",
     description: "Chamathkara Alu Creations is a leading provider of precision-engineered aluminum solutions and local hardware purchasing in Sri Lanka.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "CAC",
     images: [
       {
-        url: "/logo.png", 
+        url: "/Logo_dark.png", 
         width: 1200,
         height: 630,
         alt: "CAC Group Logo",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CAC | Chamathkara Alu Creations",
     description: "Precision-engineered aluminum solutions and local purchasing in Sri Lanka.",
-    images: ["/logo.png"],
+    images: ["/Logo_dark.png"],
   },
   robots: {
     index: true,

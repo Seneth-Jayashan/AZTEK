@@ -14,14 +14,14 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <Image
-                src="/logo.png"
+                src="/Logo_light.png"
                 alt="CAC Logo"
                 width={150}
                 height={50}
-                className="hidden dark:block object-contain dark:bg-white dark:p-1 dark:rounded"
+                className="hidden dark:block object-contain"
               />
               <Image
-                src="/logo.png"
+                src="/Logo_dark.png"
                 alt="CAC Logo"
                 width={150}
                 height={50}

@@ -41,15 +41,15 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <Image 
-              src="/logo.png" 
+              src="/Logo_light.png" 
               alt="CAC Logo" 
               width={120} 
               height={40} 
-              className="hidden dark:block object-contain dark:bg-white dark:p-1 dark:rounded"
+              className="hidden dark:block object-contain"
               priority
             />
             <Image 
-              src="/logo.png" 
+              src="/Logo_dark.png" 
               alt="CAC Logo" 
               width={120} 
               height={40} 
