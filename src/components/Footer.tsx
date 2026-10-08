@@ -14,22 +14,22 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <Image
-                src="/Logo_light.png"
-                alt="AZTEK Logo"
+                src="/logo.png"
+                alt="CAC Logo"
                 width={150}
                 height={50}
-                className="hidden dark:block object-contain"
+                className="hidden dark:block object-contain dark:bg-white dark:p-1 dark:rounded"
               />
               <Image
-                src="/Logo_dark.png"
-                alt="AZTEK Logo"
+                src="/logo.png"
+                alt="CAC Logo"
                 width={150}
                 height={50}
                 className="block dark:hidden object-contain"
               />
             </Link>
             <p className="text-[var(--color-silver-metal)] mt-4 max-w-xs leading-relaxed">
-              Bold like a lion. Built in aluminium. Designed to last. Engineering, Agriculture, and Manufacturing excellence.
+              Built With Precision. Inspired by innovation. Engineering and purchasing excellence.
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" className="w-10 h-10 rounded-full bg-[var(--color-charcoal)] border border-[var(--color-steel-grey)] flex items-center justify-center text-[var(--color-silver-metal)] hover:bg-[var(--color-royal-gold)] hover:text-black hover:border-[var(--color-champagne)] transition-colors">
@@ -73,19 +73,13 @@ export default function Footer() {
               <li>
                 <Link href="/divisions#alucore" className="text-[var(--color-silver-metal)] hover:text-[var(--color-aluminium)] transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-silver-metal)]/50"></span>
-                  AZTEK Alucore
-                </Link>
-              </li>
-              <li>
-                <Link href="/divisions#agrotec" className="text-[var(--color-silver-metal)] hover:text-[var(--color-champagne)] transition-colors flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-royal-gold)]/50"></span>
-                  AZTEK Agrotec
+                  CAC Alucore
                 </Link>
               </li>
               <li>
                 <Link href="/divisions#lanka" className="text-[var(--color-silver-metal)] hover:text-[var(--color-copper)] transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-copper)]/50"></span>
-                  AZTEK Lanka
+                  CAC Lanka
                 </Link>
               </li>
             </ul>
@@ -105,7 +99,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-[var(--color-silver-metal)]">
                 <Mail className="text-[var(--color-royal-gold)] shrink-0" size={18} />
-                <span>azteklanka@gmail.com</span>
+                <span>cac@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -114,7 +108,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-[var(--color-steel-grey)]/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[var(--color-steel-grey)]">
           <div className="flex flex-col items-center md:items-start gap-1">
-            <p>&copy; {currentYear} AZTEK Group. All rights reserved.</p>
+            <p>&copy; {currentYear} Chamathkara Alu Creations. All rights reserved.</p>
             <p>Developed by <a href="https://onexuniverse.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-royal-gold)] transition-colors">One X Universe (Pvt) Ltd</a></p>
           </div>
           <div className="flex gap-6">

@@ -13,7 +13,7 @@ export default function ContactClient() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
             <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-              Contact AZTEK
+              Contact CAC
             </h1>
             <p className="text-xl md:text-2xl text-[var(--color-silver-metal)] max-w-3xl mx-auto font-light leading-relaxed bg-white/40 dark:bg-black/20 p-4 rounded-xl backdrop-blur-sm">
               Reach out to discuss your next project, explore partnerships, or learn more about our divisions.
@@ -34,7 +34,7 @@ export default function ContactClient() {
                 <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">Get in Touch</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-royal-gold)] to-transparent mb-8"></div>
                 <p className="text-[var(--color-silver-metal)] text-lg mb-10 font-light leading-relaxed">
-                  Whether you're looking for high-end aluminium fabrication, smart agricultural solutions, or custom manufacturing, AZTEK is ready to deliver.
+                  Whether you're looking for high-end aluminium fabrication or purchasing items, CAC is ready to deliver.
                 </p>
               </div>
 
@@ -124,9 +124,8 @@ export default function ContactClient() {
                       className="w-full bg-white/50 dark:bg-black/50 border border-[var(--color-silver-metal)]/20 rounded-xl px-5 py-4 text-foreground dark:text-white focus:outline-none focus:border-[var(--color-royal-gold)] focus:ring-1 focus:ring-[var(--color-royal-gold)] transition-all font-light appearance-none"
                     >
                       <option value="general" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">General Inquiry</option>
-                      <option value="alucore" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">AZTEK Alucore (Engineering & Fab)</option>
-                      <option value="agrotec" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">AZTEK Agrotec (Smart Agriculture)</option>
-                      <option value="lanka" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">AZTEK Lanka (Manufacturing)</option>
+                      <option value="alucore" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">CAC Alucore (Engineering & Fab)</option>
+                      <option value="lanka" className="bg-background dark:bg-[var(--color-onyx-black)] text-foreground dark:text-white">CAC Lanka (Purchasing Items)</option>
                     </select>
                   </div>
                   

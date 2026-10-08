@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Welcome to AZTEK. We specialize in Aluminum Fabrication, Smart Agriculture, and Manufacturing.",
+  description: "Welcome to CAC. We specialize in Aluminum Fabrication and Purchasing items.",
 };
 
 export default function Home() {
@@ -25,10 +25,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
             <h2 className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white tracking-tighter uppercase drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
-              Bold like a lion. <br className="md:hidden" /> Built in aluminium.
+              Built With Precision. <br className="md:hidden" /> Inspired by innovation.
             </h2>
             <p className="text-foreground dark:text-white max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light backdrop-blur-sm bg-white/40 dark:bg-black/10 p-4 rounded-xl">
-              We draw inspiration from the Aztec civilization's pioneer-level engineering, resourcefulness, and master craftsmanship to construct complex architectural marvels and innovative agricultural solutions.
+              We draw inspiration from modern engineering, resourcefulness, and master craftsmanship to construct complex architectural marvels and innovative purchasing solutions.
             </p>
           </AnimatedSection>
         </div>
@@ -44,7 +44,7 @@ export default function Home() {
               <h2 className="text-5xl md:text-6xl font-black mb-4 tracking-tighter uppercase text-foreground dark:text-white">Our Core Pillars</h2>
               <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-[var(--color-royal-gold)] to-transparent mx-auto mb-8"></div>
               <p className="text-[var(--color-silver-metal)] max-w-2xl mx-auto text-lg md:text-xl font-light">
-                The foundation of AZTEK is built upon uncompromising quality, comprehensive solutions, and industry-leading standards.
+                The foundation of CAC is built upon uncompromising quality, comprehensive solutions, and industry-leading standards.
               </p>
             </div>
           </AnimatedSection>
@@ -93,10 +93,10 @@ export default function Home() {
           <AnimatedSection>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-foreground dark:text-white">Three Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-champagne)]">Growth</span></h2>
+                <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-foreground dark:text-white">Two Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] to-[var(--color-champagne)]">Growth</span></h2>
                 <div className="h-[2px] w-24 bg-[var(--color-royal-gold)] mb-8"></div>
                 <p className="text-[var(--color-silver-metal)] text-xl font-light">
-                  Expanding our horizons from specialized fabrication into smart agriculture and localized manufacturing.
+                  Expanding our horizons from specialized fabrication into localized purchasing.
                 </p>
               </div>
               <Link href="/divisions" className="group inline-flex items-center justify-center px-8 py-4 bg-transparent border border-[var(--color-royal-gold)] text-[var(--color-royal-gold)] rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[var(--color-royal-gold)] hover:text-black transition-all duration-300 shrink-0">
@@ -106,9 +106,9 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <AnimatedSection delay={0.1} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
-              <Image src="/images/image-6.jpeg" alt="AZTEK Alucore" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
+              <Image src="/images/image-6.jpeg" alt="CAC Alucore" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
               
               <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-silver-metal)]/40 shadow-[0_0_20px_rgba(166,168,173,0.3)]">
@@ -116,7 +116,7 @@ export default function Home() {
               </div>
 
               <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Alucore</h3>
+                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">CAC Alucore</h3>
                 <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
                   Managing all large-scale, high-end commercial aluminium and glass fabrication across the country.
                 </p>
@@ -128,27 +128,7 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
-              <Image src="/images/image-13.jpeg" alt="AZTEK Agrotec" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
-              
-              <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[#4CAF50]/40 shadow-[0_0_20px_rgba(76,175,80,0.3)]">
-                <Leaf className="w-8 h-8 text-[#4CAF50]" />
-              </div>
-
-              <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Agrotec</h3>
-                <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
-                  Smart agriculture division focusing on automated hydroponics, aeroponics, and GMO applications to maximize yield.
-                </p>
-                <Link href="/divisions#agrotec" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-[#4CAF50]/30 hover:border-transparent text-foreground dark:text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
-                  <span className="absolute inset-0 bg-[#4CAF50] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></span>
-                  <span className="relative z-10 group-hover/btn:text-black transition-colors duration-300">Learn More</span>
-                </Link>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3} className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/10 group relative h-[550px]">
-              <Image src="/images/image-14.jpeg" alt="AZTEK Lanka" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
+              <Image src="/images/image-14.jpeg" alt="CAC Lanka" fill className="object-cover group-hover:scale-105 group-hover:opacity-60 opacity-80 transition-all duration-[1.5s] ease-out" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 dark:from-black dark:via-black/80 to-transparent"></div>
               
               <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-xl flex items-center justify-center border border-[var(--color-copper)]/40 shadow-[0_0_20px_rgba(194,106,46,0.3)]">
@@ -156,9 +136,9 @@ export default function Home() {
               </div>
 
               <div className="relative z-10 p-10 flex-grow flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">AZTEK Lanka</h3>
+                <h3 className="text-3xl font-black mb-4 text-foreground dark:text-white uppercase tracking-wider">CAC Lanka</h3>
                 <p className="text-[var(--color-silver-metal)] mb-10 font-light text-lg">
-                  Manufacturing custom hardware accessories and fabrication tools locally to reduce reliance on costly imports.
+                  Purchasing custom hardware accessories and items locally to reduce reliance on costly imports.
                 </p>
                 <Link href="/divisions#lanka" className="relative overflow-hidden group/btn inline-flex justify-center items-center px-8 py-4 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-[var(--color-copper)]/30 hover:border-transparent text-foreground dark:text-white rounded-full font-bold text-sm text-center w-full uppercase tracking-widest transition-all">
                   <span className="absolute inset-0 bg-[var(--color-copper)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-out"></span>
@@ -185,7 +165,7 @@ export default function Home() {
               Ready to Build the <br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">Future?</span>
             </h2>
             <p className="text-[var(--color-silver-metal)] text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light bg-white/40 dark:bg-black/20 p-4 rounded-xl backdrop-blur-sm">
-              Partner with AZTEK for your next architectural, fabrication, or smart agriculture project. Let's create something extraordinary together.
+              Partner with CAC for your next architectural, fabrication, or purchasing project. Let's create something extraordinary together.
             </p>
             <Link
               href="/contact"

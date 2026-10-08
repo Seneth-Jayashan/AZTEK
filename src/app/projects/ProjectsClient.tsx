@@ -28,15 +28,7 @@ export default function ProjectsClient() {
       borderColor: "border-[var(--color-silver-metal)]/30",
       textColor: "text-gradient-silver"
     },
-    {
-      id: 3,
-      title: "Automated Hydroponics Facility",
-      category: "Agrotec",
-      description: "Setup of a large-scale indoor farming facility with climate control and automated nutrient delivery systems.",
-      imageColor: "from-[var(--color-midnight-teal)] to-[var(--color-onyx-black)]",
-      borderColor: "border-[var(--color-royal-gold)]/30",
-      textColor: "text-gradient-gold"
-    },
+
     {
       id: 4,
       title: "Luxury Residential Railings",
@@ -48,7 +40,7 @@ export default function ProjectsClient() {
     }
   ];
 
-  const categories = ["All", "Alucore", "Agrotec"];
+  const categories = ["All", "Alucore"];
 
   const filteredProjects = activeCategory === "All" 
     ? projects 

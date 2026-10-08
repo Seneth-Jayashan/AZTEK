@@ -56,10 +56,10 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="absolute inset-0 z-0"
         >
-          <Image 
-            src={HERO_IMAGES[currentImageIndex]} 
-            alt="Hero Background" 
-            fill 
+          <Image
+            src={HERO_IMAGES[currentImageIndex]}
+            alt="Hero Background"
+            fill
             className="object-cover object-center"
             priority
           />
@@ -72,7 +72,7 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-center lg:mt-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full">
-          
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -94,12 +94,12 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p variants={itemVariants} className="text-base sm:text-lg md:text-xl text-[var(--color-silver-metal)] mb-8 max-w-2xl leading-relaxed font-light backdrop-blur-sm bg-white/40 dark:bg-black/10 p-2 rounded-lg -ml-2">
-              We push the boundaries of aluminium fabrication and smart agriculture, delivering visionary solutions that redefine the modern landscape.
+              We push the boundaries of aluminium fabrication and smart technology, delivering visionary solutions that redefine the modern landscape.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-              <Link 
-                href="/projects" 
+              <Link
+                href="/projects"
                 className="relative inline-flex justify-center items-center px-8 py-4 bg-[var(--color-royal-gold)] text-black rounded-full font-bold overflow-hidden group w-full sm:w-auto shadow-[0_0_20px_rgba(184,134,43,0.3)]"
               >
                 <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
@@ -108,8 +108,8 @@ export default function Hero() {
                   <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="relative inline-flex justify-center items-center px-8 py-4 bg-white/40 dark:bg-black/40 border border-black/10 dark:border-white/20 hover:border-[var(--color-royal-gold)] hover:bg-white/60 dark:hover:bg-black/60 text-foreground dark:text-white rounded-full font-bold backdrop-blur-md transition-all duration-300 w-full sm:w-auto group uppercase tracking-wider text-sm"
               >
                 <span className="relative z-10 flex items-center">
@@ -120,7 +120,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Floating Feature Glass Cards */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 gap-3 sm:gap-4 w-full lg:w-2/5 mt-8 lg:mt-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -132,7 +132,7 @@ export default function Hero() {
               { icon: Leaf, title: "Sustainable Tech", desc: "Eco-friendly modern solutions." },
               { icon: Building2, title: "Future Ready", desc: "Setting the standard for tomorrow." }
             ].map((feature, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="flex flex-col items-start justify-center p-4 sm:p-6 rounded-2xl bg-white/40 dark:bg-white/10 border border-black/10 dark:border-white/20 backdrop-blur-xl shadow-2xl relative overflow-hidden group hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300"
@@ -147,11 +147,11 @@ export default function Hero() {
 
         </div>
       </div>
-      
+
       {/* Navigation Indicators */}
       <div className="absolute bottom-6 sm:bottom-10 left-0 right-0 flex justify-center gap-3 z-20">
         {HERO_IMAGES.map((_, idx) => (
-          <button 
+          <button
             key={idx}
             onClick={() => setCurrentImageIndex(idx)}
             className={`transition-all duration-500 rounded-full ${idx === currentImageIndex ? "w-10 h-2 bg-[var(--color-royal-gold)] shadow-[0_0_10px_rgba(184,134,43,0.8)]" : "w-2 h-2 bg-black/20 dark:bg-white/40 hover:bg-black/40 dark:hover:bg-white/80"}`}

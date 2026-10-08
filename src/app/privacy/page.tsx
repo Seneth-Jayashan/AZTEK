@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for AZTEK Group.",
+  description: "Privacy Policy for CAC Group.",
 };
 
 export default function PrivacyPolicy() {
@@ -31,12 +31,12 @@ export default function PrivacyPolicy() {
             <div className="bg-white/5 dark:bg-black/20 border border-[var(--color-royal-gold)]/10 rounded-2xl p-8 md:p-12 shadow-xl">
               <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white uppercase tracking-wider">1. Introduction</h2>
               <p className="text-[var(--color-silver-metal)] text-lg mb-10 leading-relaxed font-light">
-                Welcome to AZTEK Group. This Privacy Policy outlines how we handle your personal data when you interact with our website or services. Your privacy is critically important to us.
+                Welcome to CAC Group. This Privacy Policy outlines how we handle your personal data when you interact with our website or services. Your privacy is critically important to us.
               </p>
 
               <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white uppercase tracking-wider">2. Information We Collect</h2>
               <p className="text-[var(--color-silver-metal)] text-lg mb-10 leading-relaxed font-light">
-                We may collect personal information such as your name, email address, phone number, and any other details you provide when using our contact forms or communicating with our divisions (AZTEK Alucore, AZTEK Agrotec, and AZTEK Lanka).
+                We may collect personal information such as your name, email address, phone number, and any other details you provide when using our contact forms or communicating with our divisions (CAC Alucore and CAC Lanka).
               </p>
 
               <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white uppercase tracking-wider">3. How We Use Your Information</h2>
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white uppercase tracking-wider">5. Contact Us</h2>
               <p className="text-[var(--color-silver-metal)] text-lg leading-relaxed font-light">
                 If you have any questions about this Privacy Policy, please contact us at: <br/><br/>
-                <strong className="text-foreground dark:text-white">Email:</strong> azteklanka@gmail.com <br/>
+                <strong className="text-foreground dark:text-white">Email:</strong> info@caclanka.com <br/>
                 <strong className="text-foreground dark:text-white">Phone:</strong> 0772 960 591 / 077 1375 422
               </p>
             </div>

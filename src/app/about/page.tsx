@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about AZTEK's vision, mission, and the Aztec legacy that inspires our engineering, agriculture, and manufacturing.",
+  description: "Learn about CAC's vision, mission, and our excellence in engineering and purchasing.",
 };
 
 export default function About() {
@@ -17,61 +17,49 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <AnimatedSection>
             <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-royal-gold)] via-[var(--color-champagne)] to-black dark:to-white uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-              About AZTEK
+              About CAC
             </h1>
             <p className="text-xl md:text-2xl text-[var(--color-silver-metal)] max-w-4xl mx-auto font-light leading-relaxed bg-white/40 dark:bg-black/20 p-4 rounded-xl backdrop-blur-sm">
-              To lead the industry in engineered aluminum and architectural fabrication by delivering end-to-end solutions combining precision engineering, master craftsmanship, and flawless installation.
+              To lead the industry in engineered aluminum and architectural fabrication by delivering end-to-end solutions combining precision engineering, master craftsmanship, and flawless execution.
             </p>
           </AnimatedSection>
         </div>
       </ParallaxSection>
 
-      {/* The Aztec Connection */}
+      {/* The Legacy */}
       <section className="py-32 bg-[var(--color-onyx-black)] relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_top,rgba(184,134,43,0.15)_0%,rgba(0,0,0,0)_70%)]"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <AnimatedSection>
             <div className="mb-20 text-center">
-              <h2 className="text-4xl md:text-6xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">The Aztec Connection</h2>
+              <h2 className="text-4xl md:text-6xl font-black mb-6 text-foreground dark:text-white uppercase tracking-tighter">Our Legacy</h2>
               <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-[var(--color-royal-gold)] to-transparent mb-8 mx-auto"></div>
               <p className="text-[var(--color-silver-metal)] text-xl mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-                The name AZTEK binds our diverse sectors together under a single narrative of pioneer-level engineering, resourcefulness, and master craftsmanship. The Aztec civilization is renowned for three distinct pillars that map directly onto our business verticals:
+                The name CAC (Chamathkara Alu Creations) binds our diverse sectors together under a single narrative of pioneer-level engineering, resourcefulness, and master craftsmanship. We are renowned for two distinct pillars that map directly onto our business verticals:
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <AnimatedSection delay={0.1}>
               <div className="glass-card p-10 rounded-[2rem] h-full border border-[var(--color-silver-metal)]/20 hover:border-[var(--color-silver-metal)]/60 hover:-translate-y-3 transition-all duration-500 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(166,168,173,0.2)] group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-silver-metal)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(166,168,173,0.5)]">Engineering & Fabrication</h3>
                   <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
-                    The Aztecs were legendary master builders and stonemasons, famous for constructing complex architectural marvels, grand temples, and intricate decorative stonework without modern machinery. Our aluminium fabrication and decor mirror that same spirit of structural precision, durability, and functional aesthetics.
+                    We are legendary master builders, famous for constructing complex architectural marvels. Our aluminium fabrication and decor mirror that same spirit of structural precision, durability, and functional aesthetics.
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <div className="glass-card p-10 rounded-[2rem] h-full border border-[var(--color-royal-gold)]/20 hover:border-[var(--color-royal-gold)]/60 hover:-translate-y-3 transition-all duration-500 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(184,134,43,0.2)] group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-royal-gold)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(184,134,43,0.5)]">Agricultural Innovation</h3>
-                  <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
-                    Aztecs invented chinampas (floating gardens)—an advanced, highly efficient hydro-agricultural system that maximized crop yields in limited spaces. Using smart tech in agriculture aligns perfectly with their legacy of innovative, high-efficiency farming techniques.
-                  </p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
               <div className="glass-card p-10 rounded-[2rem] h-full border border-[var(--color-copper)]/20 hover:border-[var(--color-copper)]/60 hover:-translate-y-3 transition-all duration-500 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(194,106,46,0.2)] group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-copper)]/10 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-[2] ease-out"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(194,106,46,0.5)]">Toolmaking & Manufacturing</h3>
+                  <h3 className="text-2xl font-black mb-6 text-foreground dark:text-white uppercase tracking-wider drop-shadow-[0_0_10px_rgba(194,106,46,0.5)]">Purchasing Items</h3>
                   <p className="text-[var(--color-silver-metal)] leading-relaxed font-light">
-                    Aztec craftsmen engineered sharp, highly durable obsidian tools, weapons, and specialized hardware essential for daily survival and mass construction. Manufacturing new tools pays homage to their inventive toolmaking tradition.
+                    Our purchasing division procures highly durable items, accessories, and specialized hardware essential for daily survival and mass construction. We ensure top-tier quality for all components.
                   </p>
                 </div>
               </div>
@@ -103,7 +91,7 @@ export default function About() {
                     "Uncompromising Quality: Zero-defect checks.",
                     "End-to-End Execution: From site visit to handover.",
                     "Advanced Technology: Integrating smart tech in all divisions.",
-                    "Master Craftsmanship: Legacy of the Aztecs."
+                    "Master Craftsmanship: Legacy of our founders."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start group/item">
                       <div className="w-8 h-8 rounded-full bg-[var(--color-royal-gold)]/20 flex items-center justify-center mr-6 shrink-0 mt-1 border border-[var(--color-royal-gold)]/50 group-hover/item:scale-110 group-hover/item:bg-[var(--color-royal-gold)]/40 transition-all">
